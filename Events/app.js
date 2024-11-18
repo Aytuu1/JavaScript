@@ -1,81 +1,56 @@
-//? -------- Events (Olay)----------
-//?addEventListener(Dinleyici)
+//? ------------- Klavye Eventları -----------
+// 1 -> keypress //! Klavyeden basılan tuşu yakalamak için kullanılır (Harf ve sayılarda tetiklenir)
+// 2 -> keydown  //! Klavyeden basılan tuşu yakalamak için kullanılır (Herşey'de tetiklenir)
+// 3 -> keyup    //! Klavyede ki basılan tuştan elini kaldırdığında çalışır.(Herşey'de tetiklenir)
+ 
 
-// const clearButton= document.querySelector("#clearButton");
-
-//! ---------------- 1.Kullanımı ------------
-// clearButton.addEventListener("click",function(){
-//     alert("Merhaba");
-// })
-
-//! ------------2.Kullanımı ----------------
-// clearButton.addEventListener("click",changeTitle);
-
-// function changeTitle() {
-//   document.querySelector("#clearButton").style.backgroundColor = "red";
+//! ----------------- Keypress Kullanımı --------------
+// document.addEventListener("keypress",run);
+// function run(e){
+//     console.log("Klavyeden basılan harf: "+e.key);
+//     console.log("Klavyeden Basılan harfin Kodu: " + e.keyCode);
 // }
 
-//! ----------- 3. Kullanımı ------------
-// clearButton.addEventListener("click",changeTitle);
-
-// function changeTitle(e){
-//   console.log(e);
-//   console.log(e.type);
-//   console.log(e.target);
-//   console.log(e.target.textContent);
-//   console.log(e.target.className);
+//! ----------------- Keydown Kullanımı --------------
+// document.addEventListener("keydown",run);
+// function run(e){
+//     console.log("Klavyeden basılan harf: "+e.key);
+//     console.log("Klavyeden Basılan harfin Kodu: " + e.keyCode);
 // }
 
-//? --------------- MOUSE EVENTLARI ------------
-
-// 1 -> DOMContentLoaded //! Sayfa yüklendiğinde çalıştırılır. kaynakların yüklenmesini beklemez direk çalıştırılır.
-// 2 -> load             //! Sayfa yüklendiğinde kaynakların yüklenmesini bekler ve sonra çalıştırılır.
-// 3 -> click            //! mouse ile üstüne tıklandığında çalıştırılır.
-// 4 -> dblclick         //! mouse ile üstüne çift tıklandığında çalıştırılır.
-// 5 -> mouseover        //! mouse'yi üstüne getirdiğinizde çalışır.
-// 6 -> mouseout         //! mouse'yi üstünden çektiğinizde çalışır.
-// 7 -> mouseenter       //! mouse'yi ilgili html elementinin üzerine geldiğinde tetiklenir.
-// 8 -> mouseleave       //!  mouse'yi ilgili html elementinin üzerinden çıktığında tetiklenir.
-
-//! ----------- DOMContentLoaded kullanımı -------------
-// document.addEventListener("DOMContentLoaded",run);
-// function run(){
-//     alert("Sayfa yüklendi");
+//! ----------------- Keyup Kullanımı --------------
+// document.addEventListener("keyup",run);
+// function run(e){
+//     console.log("Klavyeden basılan harf: "+e.key);
+//     console.log("Klavyeden Basılan harfin Kodu: " + e.keyCode);
 // }
 
-//! ----------- Load kullanımı -------------
-// window.addEventListener("load",run);
-// function run(){
-//     alert("Sayfa Yüklendi");
-// }
 
-// const cardTitle = document.querySelectorAll(".card-title")[1];
-// const cardBody  = document.querySelectorAll(".card-body")[1];
-// const clearButton = document.querySelector("#clearButton");
+// const cardTitle = document.querySelectorAll(".card-title")[0];
+// const input = document.querySelector("#todoName");
 
-//! ------------------- Mouseover kullanımı ---------------
-// cardBody.addEventListener("mouseover",over);
-// function over(e){
-//     cardBody.style.color ="red";
-// }
+// input.addEventListener("keyup",function(write){
+//     cardTitle.textContent = write.target.value;
+// });
 
-//! ------------------- click kullanımı ---------------
-// cardTitle.addEventListener("click",clicked);
+//? ------------- INPUT EVENTLARI ---------
 
-// function clicked(){
-//    cardTitle.style.backgroundColor="black";
-// }
+// 1 -> focus //! Input'a odaklanıldığında çalıştırılır.
+// 2 -> blur  //! Input'dan çıkıldığında çalıştırılır.
+// 3 -> copy  //! Input'un içinde ki değeri kopyaladığınızda çalıştırılır.
+// 4 -> paste //! Input'un içine kopyaladığınız değeri yapıştırdıgınızda çalıştırılır.
+// 5 -> cut   //! Input'un içinde ki değeri kestiğinizde çalıştırılır.
+// 6 -> select //! Input'un içinde ki değeri seçtiğinizde çalıştırılır.
 
-//! ------------------- Mouseout kullanımı ---------------
-// clearButton.addEventListener("mouseout",mouseOut);
-// function mouseOut(){
-//     clearButton.style.borderRadius="40px";
-// }
+// const todoName = document.querySelector("#todoName");
+// todoName.addEventListener("blur",run)
+// todoName.addEventListener("focus",run);
+// todoName.addEventListener("copy",run);
+//  todoName.addEventListener("paste",run);
+// todoName.addEventListener("cut",run);
+//  todoName.addEventListener("select",run);
 
-//! ------------------- Mousenter kullanımı ---------------
-// clearButton.addEventListener("mouseenter", mousEnter);
-// function mousEnter(e) {
-//   if (e.type == "mouseenter") {
-//     console.log("Üzerine gelindi");
-//   }
-// }
+// function run(e){
+//     console.log(e.type);
+// };
+
