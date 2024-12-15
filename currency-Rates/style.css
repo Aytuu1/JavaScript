@@ -1,0 +1,38 @@
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(121, 184, 121) ;
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    padding:20px;
+    background-color: antiquewhite;
+}
+#container{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.header-wrapper >h4{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin: 10px 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 17px;
+}
+.content-wrapper > input{
+    padding: 5px;
+    margin: 0px 10px;
+    width: 120px;
+}
+select{
+    padding: 5px;
+}
+span{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+
+}
